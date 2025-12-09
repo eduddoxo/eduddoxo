@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Centro de Bachillerato Tecnico y de Servicios 222 - Bachillerato en Inteligencia Artificial</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Estilos mínimos añadidos aquí para colocar el logo derecho sin tocar styles.css */
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      flex: 1 1 auto;
+      text-align: left;
+      min-width: 0;
+      padding-right: 12px;
+    }
+    .brand h1 { margin: 0; font-size: 1.6rem; }
+    .brand .subtitle { margin: 6px 0 0 0; opacity: 0.95; }
+
+    .logo-right{
+      width: 100px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.12);
+      padding: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      flex: 0 0 auto;
+    }
+
+    @media (max-width:520px){
+      /* ocultar logo en pantallas muy pequeñas para que el título no quede comprimido */
+      .logo-right { display: none; }
+      .brand h1 { font-size: 1.2rem; }
+    }
+
+    /* Estilos ligeros para la nueva sección de destinatarios */
+    #destinatarios .who-list { margin-top: 10px; display: grid; gap:8px; }
+    #destinatarios .who-list li { list-style: none; background: rgba(240,248,255,0.9); padding:10px; border-radius:8px; border:1px solid rgba(230,240,255,0.8); }
+    #destinatarios .muted-note { color: #6b7280; margin-top:8px; font-size:0.95rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-row">
+        <div class="brand">
+          <h1>Centro de Bachillerato Tecnico y de Servicios 222</h1>
+          <p class="subtitle">Nueva Carrera en Inteligencia Artificial: forma parte de la próxima generación de creadores de soluciones inteligentes.</p>
+        </div>
+        <img src="logo.png" alt="Logo derecho - Bachillerato en IA" class="logo-right" />
+      </div>
+
+      <nav>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#pros-contras">Pros/Contras</a>
+        <a href="#logros">Lo que puedes lograr</a>
+        <a href="#destinatarios">Para quién va dirigida</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="que-es" class="card">
+      <h2>¿Qué es esta carrera?</h2>
+      <p>El Bachillerato en Inteligencia Artificial es un perfil curricular de preparatoria orientado a ofrecer formación práctica y ética en IA: programación en Python, fundamentos de aprendizaje automático, manejo y limpieza de datos, visión por computadora, procesamiento de lenguaje natural, y proyectos aplicados con impacto social y empresarial. Los estudiantes desarrollan proyectos reales, trabajan con datasets reales y realizan prácticas en laboratorios y empresas aliadas.</p>
+      <ul class="features">
+        <li><strong>Duración:</strong> 3 años (integrado en la preparatoria)</li>
+        <li><strong>Modalidad:</strong> Presencial con recursos digitales y laboratorio de cómputo</li>
+        <li><strong>Certificaciones:</strong> Al concluir los 3 años, obtendrás tu certificado como "Técnico en Inteligencia Artificial"</li>
+      </ul>
+    </section>
+
+    <section id="pros-contras" class="card split">
+      <div>
+        <h2>Pros</h2>
+        <ul id="pros-list" class="pros">
+          <li>Alta demanda laboral en áreas tecnológicas y de datos.</li>
+          <li>Formación práctica con proyectos y portafolio listo para mostrar.</li>
+          <li>Habilita rutas a ingeniería, ciencia de datos y investigación.</li>
+          <li>Posibilidad de colaborar con empresas y startups en problemas reales.</li>
+          <li>Énfasis en la ética y el uso responsable de la IA.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contras</h2>
+        <ul id="contras-list" class="contras">
+          <li>Requiere recursos tecnológicos (hardware y acceso a datos) que pueden elevar costos.</li>
+          <li>Ritmo de actualización de contenidos alto por la rápida evolución de la disciplina.</li>
+          <li>Curva de aprendizaje en matemáticas y programación para algunos estudiantes.</li>
+          <li>Necesidad de tutores y mentores especializados.</li>
+          <li>Plazas limitadas en la cohorte inaugural.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="logros" class="card">
+      <h2>¿Qué se puede lograr?</h2>
+      <p>Al completar el programa los estudiantes estarán en posición de:</p>
+
+      <div class="outcomes-grid">
+        <div class="outcome">
+          <h3>1. Continuar en la universidad</h3>
+          <p>Preparación sólida para carreras en Ingeniería, Ciencias de la Computación, Ciencia de Datos e Investigación en IA.</p>
+        </div>
+        <div class="outcome">
+          <h3>2. Emprender</h3>
+          <p>Diseñar y construir prototipos basados en IA (MVP) para resolver problemas locales y formar startups tecnológicas.</p>
+        </div>
+        <div class="outcome">
+          <h3>3. Conocimientos</h3>
+          <p>Obtener conocimientos en Python y ML, además de un portafolio con proyectos en visión por computadora, NLP y análisis de datos.</p>
+        </div>
+      </div>
+
+      <div class="interactive">
+        <h4>Calcula rápidamente qué resultados se ajustan a tus intereses</h4>
+        <label for="interest">Elige tu interés principal:</label>
+        <select id="interest">
+          <option value="emprender">Emprender con IA</option>
+          <option value="universidad">Prepararme para la universidad</option>
+          <option value="empleo">Buscar empleo en tecnología</option>
+          <option value="investigacion">Investigar / Competencias</option>
+        </select>
+        <button id="calc-btn" class="btn">Ver recomendaciones</button>
+        <div id="calc-result" class="result" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="destinatarios" class="card">
+      <h2>¿Para quién va dirigida esta carrera?</h2>
+      <p>La carrera está pensada para ser accesible y para una variedad de perfiles. A continuación encontrarás descripciones para que sepas si es adecuada para ti o para estudiantes que conozcas.</p>
+
+      <ul class="who-list">
+        <li><strong>Jóvenes curiosos por la tecnología:</strong> Si te interesa cómo las máquinas resuelven problemas, cómo se procesan datos o cómo funcionan aplicaciones inteligentes, aquí podrás explorar eso desde lo práctico.</li>
+        <li><strong>Estudiantes con inclinación a la práctica y proyectos:</strong> La formación se centra en resolver problemas reales mediante proyectos y trabajo en equipo, ideal para quienes aprenden haciendo.</li>
+        <li><strong>Personas sin experiencia previa en programación:</strong> No se requiere saber programar al entrar; se enseñan fundamentos desde cero, con acompañamiento y actividades guiadas.</li>
+        <li><strong>Quienes temen las matemáticas:</strong> Aunque la carrera incluye conceptos matemáticos, se enseñan de forma aplicada y gradual. Ofrecemos refuerzos y tutorías para quienes necesiten apoyo.</li>
+        <li><strong>Estudiantes pensando en estudios superiores o trabajo:</strong> Es útil tanto para quienes quieren seguir una carrera universitaria en tecnología como para quienes buscan una inserción laboral temprana en roles de apoyo técnico.</li>
+        <li><strong>Docentes y familias:</strong> Es una opción viable para acompañar a jóvenes que muestran interés por la tecnología y desean una formación práctica en la preparatoria pública.</li>
+      </ul>
+
+      <p class="muted-note">Requisitos recomendados: interés por resolver problemas, disposición para trabajar en equipo, ganas de practicar con tecnología. No es necesario tener equipo avanzado desde el inicio; la escuela facilitará recursos y estrategias inclusivas cuando sea posible.</p>
+
+    </section>
+
+    <section id="plan" class="card">
+      <h2>Plan de estudios (resumen)</h2>
+      <ol>
+        <li>Año 1: Fundamentos de programación (Python), matemáticas discretas y pensamiento computacional.</li>
+        <li>Año 2: Aprendizaje automático básico, manejo de datos y proyectos colaborativos.</li>
+        <li>Año 3: Proyectos de IA aplicados, ética y responsabilidad, prácticas profesionales y portafolio.</li>
+      </ol>
+      <p class="muted">Incluye talleres, mentorías y participación en competencias de IA.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
