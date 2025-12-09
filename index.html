@@ -43,6 +43,33 @@
     #destinatarios .who-list { margin-top: 10px; display: grid; gap:8px; }
     #destinatarios .who-list li { list-style: none; background: rgba(240,248,255,0.9); padding:10px; border-radius:8px; border:1px solid rgba(230,240,255,0.8); }
     #destinatarios .muted-note { color: #6b7280; margin-top:8px; font-size:0.95rem; }
+
+    /* Estilos para el pie de página (derechos de autor) */
+    .site-footer {
+      margin-top: 32px;
+      padding: 16px 12px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      text-align: center;
+      background: linear-gradient(180deg, rgba(250,250,250,1), rgba(245,245,247,1));
+      color: #374151;
+      font-size: 0.95rem;
+      border-radius: 8px;
+    }
+    .site-footer .footer-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .site-footer .credit { flex: 1 1 auto; text-align: left; min-width: 0; }
+    .site-footer .links { flex: 0 0 auto; text-align: right; }
+    .site-footer a { color: inherit; text-decoration: underline; }
+    @media (max-width:640px) {
+      .site-footer .credit, .site-footer .links { text-align: center; flex-basis: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -158,9 +185,35 @@
     </section>
   </main>
 
+  <!-- Pie de página con derechos de autor y créditos -->
+  <footer class="site-footer" role="contentinfo" aria-label="Pie de página - derechos de autor">
+    <div class="footer-inner">
+      <div class="credit">
+        <div>
+          <strong>Centro de Bachillerato Tecnológico Industrial y de Servicios No. 222</strong>
+        </div>
+        <div class="small">
+          &copy; <span id="current-year" aria-hidden="true"></span> Centro de Bachillerato Tecnológico Industrial y de Servicios No. 222 — Bachillerato en Inteligencia Artificial.
+          Diseñado por Eduardo Yael Guerrero Martínez. Todos los derechos reservados.
+        </div>
+      </div>
+      <div class="links">
+        <a href="#que-es">Inicio</a> ·
+        <a href="#plan">Plan de estudios</a> ·
+        <a href="#destinatarios">Destinatarios</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Actualiza el año del pie de página automáticamente
+    (function(){ 
+      var y = new Date().getFullYear();
+      var el = document.getElementById('current-year');
+      if(el) el.textContent = y;
+    })();
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
